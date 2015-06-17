@@ -1,0 +1,5 @@
+1. Frontend and backend have been integrated.
+2. Go to localhost:5000/ to view the list of doctors. On the same page, click "add new doctor" button to add a new doctor
+3. once you click on proceed, you'll be redirected to "localhost:5000/" and should be able to view the list of doctors currently in database
+4. Click on add clinic or add specility to add clinics and specialities
+5. Go to localhost:5000/search. To search for doctors by speciality and/or location, type in and search. Plz note that not entering a speciality will result into an error. not entering a location however will not give any errors.

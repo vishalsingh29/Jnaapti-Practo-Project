@@ -1,0 +1,48 @@
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<style> 
+table, tr, th, td 
+{ 
+border: 1px solid black; 
+} 
+</style>
+<h1 style="color: 0099FF">Search Results</h1>
+
+{% if onlyDoctors %}
+	{% for doctor in onlyDoctors %}
+	<div class="panel panel-default">
+	<div style = "margin: auto; width: 300px;" class="panel-body">
+		Name: {{ doctor[0].name }} <br>
+		Email: {{ doctor[0].email }}<br>
+		Phone: {{ doctor[0].phone }}<br>
+		Clinic: {{ doctor[1].clinicName }}<br>
+		Experience: {{ doctor[0].experience }}<br>
+		Area: {{ doctor[1].area }}<br>
+	<button class="btn btn-success btn-xs">Book </button>
+	</div>
+	</div>
+	{% endfor %}
+{% else %} 
+	{% for doctor in dictionary.docList %} 
+	<div class="panel panel-default">
+	<div style = "margin: auto; width: 300px;" class="panel-body">
+		 Name: {{ doctor[0].name }}<br>
+		 Email: {{ doctor[0].email }}<br>
+		 Phone: {{ doctor[0].phone }}<br>
+		 Clinic: {{ doctor[1].clinicName }}<br>
+		 Experience: {{ doctor[0].experience }} years<br>
+		 Area: {{ doctor[1].area }}<br>
+		 Speciality: {{ doctor[2].specialityName }}<br>
+		 <button class="btn btn-success btn-xs">Book</button>
+		 </div>
+		 </div>
+	{% endfor %} 
+{% endif %}

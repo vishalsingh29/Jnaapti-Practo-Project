@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+   <!---<script src="{{ url_for('static',filename='jquery-2.1.4.min.js') }}"></script>
+   <script src="{{ url_for('static',filename='jquery-ui.js') }}"></script>-->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   <script src="http://code.jquery.com/jquery-1.11.0.min.js"> </script>
+   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+
+       var specialities= {{ specialities|safe }};
+       var locations= {{ locations|safe }};
+
+       $(function() {
+    $('#specialization').autocomplete({
+                source:specialities
+                });
+                $('#location').autocomplete({
+                source:locations
+                });
+  });
+
+</script>
+<style type="text/css">
+  #header{
+    margin: auto;
+    width: 800px;
+  }
+</style>
+</head>
+
+<body>
+    <div id = "header">
+      <img style = "width: 120px; height: 50px;"src = "static/image1.png">
+    </div>
+    <div style="margin:auto;width:500px;">
+      <form action="/search" method="POST">
+      Specialization
+        <input type="text" id="specialization" name="specialization" class="form-control input-sm">
+        Location
+    <input type="text" id="location" name="location" class="form-control input-sm" >
+      <button style="margin-left:50%;"type="submit"><i class="fa fa-search"></i></button>
+       <!-- <input type="submit" name="my-form" value="Send">-->
+    </form>
+    </div>
+</body>
+</html>

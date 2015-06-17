@@ -1,0 +1,8 @@
+<h2>Specialities</h2>
+{% if specialities %}
+	{% for sp in specialities %}
+		<h3>{{ sp.specialityName }}</h3>
+	{% endfor %}
+{% else %}
+	<h2>Nothing!!</h2>
+{% endif %}

@@ -1,0 +1,10 @@
+<div>
+    <form method="POST" action="/">
+        <div>{{ form.name.label }}: {{ form.name() }}</div>
+        <div>{{ form.email.label }}: {{ form.email() }}</div>
+        <div style="display:none">{{ form.id.label }}: {{ form.id() }}</div>
+        <div>
+            <button type="submit">Add</button>
+        </div>
+    </form>
+</div>

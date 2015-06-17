@@ -1,0 +1,8 @@
+<form method = "POST" action="/speciality">
+	<div id="clinics">
+	    <h2>Specialities</h2>
+		<div>{{ form.specialityName.label }}<br>{{ form.specialityName() }}</div>
+		<div style="display:none">{{ form.doctor_id.label }}:{{ form.doctor_id() }}</div>
+	</div>
+	<div> <button id="proceed" type="submit">Proceed</button></div>
+</form>

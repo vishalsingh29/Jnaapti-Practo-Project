@@ -1,0 +1,17 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<h2>Clinics</h2>
+{% if clinics %}
+	{% for clinic in clinics %}
+		<h3>{{ clinic.clinicName }}</h3>
+		<h3>{{ clinic.address }} </h3>
+	{% endfor %}
+{% else %}
+	<h2>Nothing!!</h2>
+{% endif %}

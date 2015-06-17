@@ -1,0 +1,25 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<form method = "POST" action="/clinic">
+	<div id="clinics">
+		<div class="panel panel-primary">
+	<div class = "panel-heading">
+Clinics</div>
+<div class="panel-body">
+	 
+		<div>{{ form.clinicName.label }}<br>{{ form.clinicName() }}</div>
+		<div>{{ form.area.label }}<br>{{ form.area() }}</div>
+		<div>{{ form.address.label }}<br>{{ form.address() }}</div>
+		<div>{{ form.startTime.label }}<br>{{ form.startTime() }}</div>
+		<div>{{ form.endTime.label }}<br>{{ form.endTime() }}</div>
+		<div style="display:none">{{ form.doctor_id.label }}:{{ form.doctor_id() }}</div>
+	</div>
+</div>
+</div>
+	<div> <button id="proceed" type="submit">Proceed</button></div>
+</form>
